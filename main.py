@@ -1,4 +1,3 @@
-
 def calibration_value(line):
     # convert input to string
     line = str(line)
@@ -18,3 +17,18 @@ def sum_calibration_values(lines):
         # add the calibration value of each line to the sum
         sum += calibration_value(line)
     return sum
+
+
+def get_lines_from_file(filepath):
+    # open the file
+    file = open(filepath, 'r')
+    # read the lines from the file
+    lines = file.readlines()
+    # close the file
+    file.close()
+    # return the lines
+    return lines
+
+
+# print the sum of the calibration values of the lines in the file
+#print(sum_calibration_values(get_lines_from_file('./inputs/day1.txt')))
